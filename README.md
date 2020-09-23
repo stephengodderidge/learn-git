@@ -48,6 +48,15 @@ You'll need to clone your fork repository to you local environment. "Clone" migh
 
 And Voila! You've officially cloned the repository onto your local machine. Navigate to your repository by running a quick `cd learn-git`
 
+### Step 2.5: Adding a "Remote" back to the original repository
+One of the trickiest parts of Git is updating your local branch with the changes in the remote repository (`stephengodderidge/learn-git` in our case). In order to do this, we'll need to add a "remote" reference to our local git branch.
+
+1. Run `git remote -v` to see all of your current remotes. You should see one: `origin` and that should reference your forked remote repo. Don't worry about the difference between `(fetch)` and `(push)` for now.
+2. Next, add a remote called `upstream` with the URL of the original repository by running `git remote add upstream https://github.com/stephengodderidge/learn-git.git`.
+3. Run `git remote -v` to see that new remote added
+
+Congrats! You added your new remote! Now, when updates are added to that repository, we'll be able to _pull_ those changes to your local repository. We'll practice this after we open our pull request in the Bonus section of this tutorial.
+
 
 ## Step 3: Create a feature branch on your local repo
 Now that you're on your local repository, you can focus on making our changes. Your assignment is to add a script to the `favorite-animals/` directory. Yes, very complicated. It's basic, but the goal is to learn git. You'll name your script `your_firstname_and_lastname.py`, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
@@ -74,7 +83,7 @@ print("My favorite animals are sloths")
 ```
 5. Save your new file.
 
-Now you're ready to move on and actually commit our changes!
+Now you're ready to move on and actually commit your changes!
 
 ## Step 5: Commit your changes
 Committing your changes adds your changes to the current branch. Before you commit your changes, you have to _stage_ your changes. This step may seem trivial when you're working on a few files (especially in our case), but this step becomes more helpful as you work on more files at once.
@@ -144,7 +153,7 @@ UPDATE: PR review process
 
 
 
-## Next Concepts
+## Next Concepts To Learn
 
 #### Commands that were used:
 `git clone <insert-the-https-url-here>`
