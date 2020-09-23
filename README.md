@@ -1,5 +1,7 @@
 # learn-git-tutorial
-A tutorial for those looking to get started using git and github. Git might not get you a job, but it will certainly be an everday tool. It's how world-class dev orgs ship applications. Let's get started!
+A tutorial for those looking to get started using git and github. Originally used on campus at BYU.
+
+Git might not get you a job, but it will certainly be an everday tool. It's how world-class dev orgs ship applications. Let's get started!
 
 > PS - I'll be focusing on GitHub here, but all of the same concepts apply to BitBucket, GitLab, or any other git-based storage site. The UI might look different, but they're all based on the same underlying tech (git).
 
@@ -9,7 +11,7 @@ The README of this repo is the tutorial, but you'll use the rest of the files to
 
 ## Pre-requisites:
 1. You have git installed on your machine
-2. You have setup your git config with your email and git username. See the section `Your Identity` in [the First Time Git Setup documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) if you haven't done this step. You can make sure that you've done this step by running `git config user.name` and `git config user.email`
+2. You have setup your git config with your email and git username. See the section `Your Identity` in [the First Time Git Setup documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) if you haven't done this step. You can make sure that you've done this step by running `git config user.name` and `git config user.email`.
 
 ## Step 0: Tutorial Overview
 In this tutorial, you will be doing the following steps:
@@ -101,6 +103,8 @@ Think of committing your staged changes as saving your changes to your repositor
 
 3. Run `git add favorite-animals/<insert_your_script_name>.py`. This step adds the file to the files staged for the commit.
 
+    > Note -- if you'd like to stage all of the files you've made changes to locally, you can simply run the shortcut `git add .` instead of adding each file individually.
+
 4. Run `git status` again to confirm the changes have been added to the staged files. You should see a `Changes to be committed:` section. Underneath, you should see the new file path. This means your files are ready to be committed.
 
 5. Run `git commit -m "add my new script"`. This commits the changes, and allows us to add a git commit message at the same time. Now, our branch has been updated to point to this new commit.
@@ -152,24 +156,44 @@ This Pull Request needs to be approved by the owners of the repository before it
 
 Congrats! You've opened your first pull request!! Go ahead and take a look around at the different tabs. See if you can find where you can view your changes (Hint: look for files). You can also view your commit(s).
 
-UPDATE: PR review process
+Because you don't own the upstream repo (`stephengodderidge/learn-git`), you won't be able to approve your own PR. I'll keep an eye on this repo, and once I see your PR, I'll approve it and merge it into master.
+
+Note that if I wanted to, I could add collaborators that contribute directly to this repository by by going to Settings -> Manage Access -> Invite a Collaborators. This would be particularly useful for group projects.
 
 
 
 ## Next Concepts To Learn
 
 #### Commands that were used:
-`git clone <insert-the-https-url-here>`
-`cd <insert-repo-name-here>`
+```
+git clone <insert-the-https-url-here>
+git remote -v
+git remote add <insert-the-remote-name> <insert url to the original repository>
+git status
+git branch <insert-name-of-branch>
+git checkout <insert-name-of-branch>
+git checkout -b <insert-name-of-branch>
+git add <insert-name-of-file>
+git add .
+git commit -m "<insert-a-message-to-describe-the-commit>"
+git push
+git push --set-upstream origin <insert-name-of-current-local-branch>
+```
 
+> note: DON'T Simply run these commands in order. There is some overlap. This list is mainly meant to be a reference for later. Remembering all of the git commands can be tricky. __I still regularly google Git commands__, and I've used Git everyday for the last 3 years or so.
 
-## Other common commands:
-git log -- shows the log of commits to your repo. Shows the hashes of the commits, along with their commit messages
 
 ## Topics Not Covered
-We won't cover these topics, but they're still useful to know after you've learned everything else:
-* How to undo your last commit. See the second answer to [this post on Stackoverflow](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git).
-* How to view your current changes in VSCode. I definitely recommend using VSCode if you can. I run all of my git commands and logic through the command line, but I use the git tab on the far right toolbar to view the changes to my files. See `[the VS Code documentation for more info](https://code.visualstudio.com/docs/editor/versioncontrol).
+This tutorial doesn't cover these topics, but they're still useful to know after you've learned everything included above:
+
+* __How to undo your last commit__ - See the second answer to [this post on Stackoverflow](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git).
+
+* __How to view your current changes in VSCode__ - I definitely recommend using VSCode if you can. I run all of my git commands and logic through the command line, but I use the git tab on the far right toolbar to view the changes to my files. See `[the VS Code documentation for more info](https://code.visualstudio.com/docs/editor/versioncontrol).
+
+* __How to _Rebase_ Your Feature Branch Onto the latest version of Master__ - Let's say you're working on your feature branch for a few days, and the upstream master has been updated, and you need the new changes on your feature branch. The process to do this is called "rebasing". It's a good one to know. I'll work on adding a tutorial for it, but in the meantime, you can always Google "how to rebase my branch onto master" and a Stack Overflow link should pop up.
+
+* __How to Resolve Merge Conflicts__ - Let's say you open a PR that changes files that someone else changed _after you created your branch_. Your branch doesn't have these changes, so Git isn't sure how it should treat the order of the commits. This is called a Merge Conflict.
+    This is the trickiest part of working in git. This will most certainly cause you headaches in the future. It's worth an entire tutorial by itself. I'm working on adding a full-fledge tutorial, but here are the basic steps: (A) Pull the latest changes from the upstream master into the local master. (B) Checkout the feature branch that has the conflicts. (C) Rebase your feature branch onto master. (D) Use the interactive rebasing process to resolve any conflicts. (E) Force push your changes. Again, I'll add a full-fledge tutorial soon, but hopefully these steps give you a guide for things to Google.
 
 #### Terms to be familiar with:
 Here are some of the terms we've used in the tutorial. This isn't meant to be a comprehensive git dictionary, but hopefully it helps fill in any gaps you might have after the tutorial.
@@ -182,13 +206,13 @@ Here are some of the terms we've used in the tutorial. This isn't meant to be a 
   * _verb_: to write your changes to whichever branch you're currently on.
   * _noun_: refers to the new changes themselves. Once you've committed your changes, you can undo those changes by undoing the commit. Git uses hashes to refer to your various commits.
 
-* __remote__ - opposite of local. Used to describe a repo that exists in GitHub (or a different git service)
+* __remote__ - opposite of local. Used to describe a repo that exists in GitHub (or a different git service). By default, your local repo will have one remote: `origin`. You can add other remotes as well. This is helpful when you want to pull the latest changes from the original repository that your fork is generated from (see Step 2.5 above in the tutorial).
 
 * __local__ - opposite of remote. Used to describe a repo that exists on your local machine.
 
-* __fork__ - a copy of someone else's repository that exists under your user. This is a very common approach in the open-source contributing world. See Step 1.
+* __fork__ - a copy of someone else's repository. This new copy is owned by your GitHub user, so you're able to make changes to it. This is a very common approach in the open-source contributing world. See Step 1.
 
-* __pull request__ - a request to merge your changes into a branch (usually master). Think of it as a request to _pull your feature branch's changes into the master branch_. Note that these feature branches can be on a fork of the main repo.
+* __pull request__ - a request to merge your changes into a branch (usually master). Think of it as a request to _pull your feature branch's changes into the master branch_. Note that these feature branches can be on a fork of the original/upstream/main repo.
 
 * __push__ - Used to describe the process of adding your commit to another branch, usually from a local to a remote. Example: _Push your changes (commit) to your remote repo_.
 
@@ -196,9 +220,6 @@ Here are some of the terms we've used in the tutorial. This isn't meant to be a 
 
 *__master__ - Used as the default branch for any repository. There is nothing special about this branch; it's simply the one that is designated as the main branch
 
-* __origin__ - A term used to describe the remote repo of a local repository. Used when pushing or pulling from the remote repository, such as `git pull origin master`
-
-> Because of today's society's realization of systemic racism, there are movements to rename "master" to "main." I think this is an important and necessary shift in our verbiage as developers. GitHub will soon make it the default for all repositories. However, in the meantime, for those learning git, it is still helpful to learn "master" as the default branch. New developers will most certainly come across repos with a `Master` branch and need to be aware of what that means. For this reason, I'm going to continue to use `master/main` to refer to the default branch.
-
+    > Because of today's society's realization of systemic racism, there are movements to rename "master" to "main." I think this is an important and necessary shift in our verbiage as developers. GitHub will soon make it the default for all repositories. However, in the meantime, for those learning git, it is still helpful to learn "master" as the default branch. New developers will most certainly come across repos with a `Master` branch and need to be aware of what that means. For this reason, I'm going to continue to use `master/main` to refer to the default branch.
 
 __Did I miss a term? Go ahead and open a PR to add any you think should be added!__
