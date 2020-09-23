@@ -161,10 +161,11 @@ Because you don't own the upstream repo (`stephengodderidge/learn-git`), you won
 Note that if I wanted to, I could add collaborators that contribute directly to this repository by by going to Settings -> Manage Access -> Invite a Collaborators. This would be particularly useful for group projects.
 
 
+# And We've finished the Tutorial! Pat yourself on the back, you're well on your way to mastering git
 
-## Next Concepts To Learn
+## More Content:
 
-#### Commands that were used:
+### Commands that were used in this tutorial:
 ```
 git clone <insert-the-https-url-here>
 git remote -v
@@ -183,7 +184,14 @@ git push --set-upstream origin <insert-name-of-current-local-branch>
 > note: DON'T Simply run these commands in order. There is some overlap. This list is mainly meant to be a reference for later. Remembering all of the git commands can be tricky. __I still regularly google Git commands__, and I've used Git everyday for the last 3 years or so.
 
 
-## Topics Not Covered
+### Other Great Tutorials:
+Need more practice? Take a look at some of these tutorials to expand your experience (Don't worry, they're free!):
+* [Kent C Dodd's Intro to GitHub](https://egghead.io/lessons/javascript-introduction-to-github) -- an Awesome course that helped me fill in some gaps of my knowledge about GitHub way back when.
+* [Kent C Dodd's Intro to Contributing to Open Source](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github) -- the best way to learn is to do, and this is a great course for contributing to real projects on github.
+* Another good [step-by-step guide from opensource.com](https://opensource.com/article/18/1/step-step-guide-git)
+
+
+### Topics Not Covered
 This tutorial doesn't cover these topics, but they're still useful to know after you've learned everything included above:
 
 * __How to undo your last commit__ - See the second answer to [this post on Stackoverflow](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git).
@@ -195,7 +203,7 @@ This tutorial doesn't cover these topics, but they're still useful to know after
 * __How to Resolve Merge Conflicts__ - Let's say you open a PR that changes files that someone else changed _after you created your branch_. Your branch doesn't have these changes, so Git isn't sure how it should treat the order of the commits. This is called a Merge Conflict.
     This is the trickiest part of working in git. This will most certainly cause you headaches in the future. It's worth an entire tutorial by itself. I'm working on adding a full-fledge tutorial, but here are the basic steps: (A) Pull the latest changes from the upstream master into the local master. (B) Checkout the feature branch that has the conflicts. (C) Rebase your feature branch onto master. (D) Use the interactive rebasing process to resolve any conflicts. (E) Force push your changes. Again, I'll add a full-fledge tutorial soon, but hopefully these steps give you a guide for things to Google.
 
-#### Terms to be familiar with:
+### Terms to be familiar with:
 Here are some of the terms we've used in the tutorial. This isn't meant to be a comprehensive git dictionary, but hopefully it helps fill in any gaps you might have after the tutorial.
 
 * __repository__ - the git-enabled folder. Think of it as your project folder with a hidden .git folder inside. This repository can have branches, forks, and various commits. The main goal is that it tracks all of the versions of a project, both working and development. AKA "a repo."
