@@ -7,6 +7,9 @@ A tutorial for those looking to get started using git and github. Git might not 
 
 The README of this repo is the tutorial, but you'll use the rest of the files to practice forking, commiting, open a PR, etc. This won't teach you everything, but I hope it gives you enough of a base if you get stuck in any sticky situations.
 
+## Pre-requisites:
+1. You have git installed on your machine
+2. You have setup your git config with your email and git username. See the section `Your Identity` in [the First Time Git Setup documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) if you haven't done this step. You can make sure that you've done this step by running `git config user.name` and `git config user.email`
 
 ## Step 0: Tutorial Overview
 In this tutorial, you will be doing the following steps:
