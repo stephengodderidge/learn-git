@@ -189,6 +189,7 @@ Need more practice? Take a look at some of these tutorials to expand your experi
 * [Kent C Dodd's Intro to GitHub](https://egghead.io/lessons/javascript-introduction-to-github) -- an Awesome course that helped me fill in some gaps of my knowledge about GitHub way back when.
 * [Kent C Dodd's Intro to Contributing to Open Source](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github) -- the best way to learn is to do, and this is a great course for contributing to real projects on github.
 * Another good [step-by-step guide from opensource.com](https://opensource.com/article/18/1/step-step-guide-git)
+* Here's [an interactive git playground](https://learngitbranching.js.org/?NODEMO) that you can practice branching
 
 
 ### Topics Not Covered
