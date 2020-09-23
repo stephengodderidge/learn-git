@@ -78,8 +78,11 @@ Now we're ready to move on and actually commit our changes!
 Committing your changes adds your changes to the current branch. Think of it as saving your changes to your repository. How is committing your changes different from saving the files you changed? Good question. Go through this step, and we'll come back to that.
 
 1. Make sure you saved your new script.
-2. Run `git status` to see the files that have been changed.
-
+2. Run `git status` to see the files that have been changed. You should see a `Changes not staged for commit:` section. Underneath, you should see the file path to your new script (example: `favorite-animals/stephen_godderidge.py`). These are changes that you have saved to your files, but they aren't currently setup to be committed yet. In fact, we'll need _add_ them to the staged files before we can commit them.
+3. Run `git add favorite-animals/<insert_your_script_name>.py`. This step adds the file to the files staged for the commit.
+4. Run `git status` again to confirm the changes have been added to the staged files. You should see a `Changes to be committed:` section. Underneath, you should see the new file path. This means your files are ready to be committed.
+5. Run `git commit -m "add my new script"`. This commits the changes, and allows us to add a git commit message at the same time. Now, our branch has been updated to point to this new commit.
+6. Run `git status` to check that the files have been added. You should see a message that says
 
 
 
