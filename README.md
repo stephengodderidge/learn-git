@@ -1,13 +1,13 @@
 # learn-git-tutorial
 A tutorial for those looking to get started using git and github. Originally used on campus at BYU.
 
-Git might not get you a job, but it will certainly be an everday tool. It's how world-class dev orgs ship applications. Let's get started!
+Git might not get you a job, but it will certainly be an every day tool. It's how world-class dev orgs ship applications. Let's get started!
 
 > PS - I'll be focusing on GitHub here, but all of the same concepts apply to BitBucket, GitLab, or any other git-based storage site. The UI might look different, but they're all based on the same underlying tech (git).
 
 > PPS - Don't worry, I won't let the git puns git in our way.
 
-The README of this repo is the tutorial, but you'll use the rest of the files to practice forking, commiting, open a PR, etc. This won't teach you everything, but I hope it gives you enough of a base if you get stuck in any sticky situations.
+The README of this repo is the tutorial, but you'll use the rest of the files to practice forking, committing, open a PR, etc. This won't teach you everything, but I hope it gives you enough of a base if you get stuck in any sticky situations.
 
 ## Pre-requisites:
 1. You have git installed on your machine
@@ -23,12 +23,6 @@ In this tutorial, you will be doing the following steps:
 6. Push your local feature branch to your remote repo (your fork)
 7. Open a Pull Request to the Starting Repository (stephengodderidge/learn-git)
 
-For bonus steps, you can do the following:
-
-1. Pull in the latest changes from this repo (not your fork) into your local repo
-2. Resolve Merge Conflict
-
-> Don't worry if you don't understand all these steps right now. All of the high level steps & terms should make a lot more sense after going through each of the steps. Let's get started!
 
 ## Step 1: Fork This Repository
 
@@ -47,10 +41,10 @@ After you fork your repo, your newly-created repo will be referred to as a "fork
 Congrats! You've created a fork! This is simply a copy of the base repository `stephengodderidge/learn-git`
 
 ## Step 2: Clone Your Newly-Created Fork
-You'll need to clone your fork repository to you local environment. "Clone" might just sound like a fancy way to say "download", but cloning keeps the connection between the remote repository (in GitHub) so you can add our changes (commits) back to the remote. By the end of this step, your will have cloned the repository into a folder on your computer.
+You'll need to clone your fork repository to your local environment. "Clone" might just sound like a fancy way to say "download", but cloning keeps the connection between the remote repository (in GitHub) so you can add our changes (commits) back to the remote. By the end of this step, your will have cloned the repository into a folder on your computer.
 
 1. Go to your fork and hit the green "Code" button. Select HTTPS.
-> There are several ways to clone the repository, including SSH and GitHubs own command-line interface. We're going to keep it simple and go with HTTPS.
+> There are several ways to clone the repository, including SSH and GitHub's own command-line interface. We're going to keep it simple and go with HTTPS.
 2. Copy the link in the box. This link is the url to the repository. It should look something like https://github.com/your-username-here/learn-git.git
 3. If you're on a Mac, open your terminal. If you're on windows, use Git BASH. I'm not a PC user, but I'm fairly certain you can download Git BASH on [gitforwindows.org](https://gitforwindows.org/)
 4. Navigate to the parent directory you'd like to download it to.
@@ -141,7 +135,7 @@ Now that you have your changes committed, you need to _push_ those changes to yo
      So, what is `origin`? This is the term that git uses to refer to a remote repo. In our case, origin is our remote repository (our fork). The upstream branch is the branch tracked on the remote repository by your local branch. So, in our case, we're setting up our local `my-animal` branch to track any changes that happen in our origin's (our fork's) `my-animal` branch. When would this be useful? Well, say we have multiple developers making changes to a feature branch. We need a way to pull down the latest commits
 
      [More on that in this helpful article](https://devconnected.com/how-to-set-upstream-branch-on-git/#:~:text=Upstream%20branches%20define%20the%20branch,set%20upstream%20branches%20on%20Git.)
-3. Do as git suggests, and run `git push --set-upstream origin my-animal`. You'll see a bunch of update statements like `resolving deltas` and `Writing objects:`. This means git is pushing your local branch to your remote repo. You'll also see a helpful line that should read:
+3. Do as git suggests and run `git push --set-upstream origin my-animal`. You'll see a bunch of update statements like `resolving deltas` and `Writing objects:`. This means git is pushing your local branch to your remote repo. You'll also see a helpful line that should read:
 
 ```
 remote: Create a pull request for 'my-animal' on GitHub by visiting:
@@ -158,14 +152,14 @@ Our next goal is to add our commits to the master branch of the real `learn-git`
 This Pull Request needs to be approved by the owners of the repository before it can be _merged_ into master. Different companies have different approval processes (example: multiple reviewers from different teams), but our use case is simple. You're simply focused on opening the pull request.
 
 1. Open a request by going to the link in the last step of Step 6. It should look like `https://github.com/<insert-your-github-username>/learn-git/pull/new/my-animal`. This should take you to a page with the title of __Open a pull request__.
-2. Name your Pull Request whatever you want. Add some commetns if you'd like.
+2. Name your Pull Request whatever you want. Add some comments if you'd like.
 3. Once you've added your PR name and comments, go ahead and click the `Create Pull Request`.
 
 Congrats! You've opened your first pull request!! Go ahead and take a look around at the different tabs. See if you can find where you can view your changes (Hint: look for files). You can also view your commit(s).
 
 Because you don't own the upstream repo (`stephengodderidge/learn-git`), you won't be able to approve your own PR. I'll keep an eye on this repo, and once I see your PR, I'll approve it and merge it into master.
 
-Note that if I wanted to, I could add collaborators that contribute directly to this repository by by going to Settings -> Manage Access -> Invite a Collaborators. This would be particularly useful for group projects.
+Note that if I wanted to, I could add collaborators that contribute directly to this repository by going to Settings -> Manage Access -> Invite a Collaborators. This would be particularly useful for group projects.
 
 
 # And We've finished the Tutorial! Pat yourself on the back, you're well on your way to mastering git
@@ -188,7 +182,7 @@ git push
 git push --set-upstream origin <insert-name-of-current-local-branch>
 ```
 
-> note: DON'T Simply run these commands in order. There is some overlap. This list is mainly meant to be a reference for later. Remembering all of the git commands can be tricky. __I still regularly google Git commands__, and I've used Git everyday for the last 3 years or so.
+> note: DON'T Simply run these commands in order. There is some overlap. This list is mainly meant to be a reference for later. Remembering all of the git commands can be tricky. __I still regularly google Git commands__, and I've used Git every day for the last 3 years or so.
 
 
 ### Other Great Tutorials:
@@ -232,7 +226,7 @@ Here are some of the terms we've used in the tutorial. This isn't meant to be a 
 
 * __push__ - Used to describe the process of adding your commit to another branch, usually from a local to a remote. Example: _Push your changes (commit) to your remote repo_.
 
-* __pull__ - Used to desribe the process of adding the changes from one branch to another, usually from a remote to a local. _Pull in the latest changes from the master branch_.
+* __pull__ - Used to describe the process of adding the changes from one branch to another, usually from a remote to a local. _Pull in the latest changes from the master branch_.
 
 *__master__ - Used as the default branch for any repository. There is nothing special about this branch; it's simply the one that is designated as the main branch
 
