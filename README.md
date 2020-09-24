@@ -23,10 +23,6 @@ In this tutorial, you will be doing the following steps:
 6. Push your local feature branch to your remote repo (your fork)
 7. Open a Pull Request to the Starting Repository (stephengodderidge/learn-git)
 
-For bonus steps, you can do the following:
-7. Pull in the latest changes from this repo (not your fork) into your local repo
-8. Resolve Merge Conflict
-
 
 ## Step 1: Fork This Repository
 Instead of adding your changes directly to someone else's repo, you can create a copy of their repository to work with. When you create this copy, we call it "forking the repository."
