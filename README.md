@@ -25,9 +25,12 @@ In this tutorial, you will be doing the following steps:
 
 
 ## Step 1: Fork This Repository
+
+> Repository (Repo): A folder that holds your code. This folder is special because it has a hidden `.git` folder that holds information about how your repository has changed over time.
+
 Instead of adding your changes directly to someone else's repo, you can create a copy of their repository to work with. When you create this copy, we call it "forking the repository."
 
-Conceptually, think about hitting a fork in the road -- the road splits into two. This is the same with forking in git. Forking simply creates a snapshot of the base repository (`stephengodderidge/learn-git`) that you can make changes to. Once you make changes, you can open a pull request (PR) from a feature branch on your fork to the base repo's master. More on this later.
+Conceptually, think about hitting a fork in the road -- the road splits into two. This is the same with forking in git. Forking simply creates a snapshot of the base repository (`stephengodderidge/learn-git`) that you have permission to make changes to.
 
 After you fork your repo, your newly-created repo will be referred to as a "fork." This might sound weird, but just go with it. I promise it will stick eventually.
 
@@ -63,6 +66,8 @@ Congrats! You added your new remote! Now, when updates are added to that reposit
 Now that you're on your local repository, you can focus on making our changes. Your assignment is to add a script to the `favorite-animals/` directory. Yes, very complicated. It's basic, but the goal is to learn git. You'll name your script `your_firstname_and_lastname.py`, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
 
 1. Make sure you're in the root of your local repo. Use `cd` to get there. To make sure you're on the master branch, run `git status`. The output will show you your current branch. If you're not on your default branch, run the command in step three to switch back. We'll come back to `git status` in a minute.
+
+> (Feature) Branch: A git branch is like an alternate history for your code. In most repositories the branch where your working version lives is called something like `master`, `main`, or `prod`. If you want to try out some changes or build a new feature, you can create a new branch to ensure the other branches of your code won't be affected. When you are ready to add your feature back to the working version you _merge_ the feature branch into `master`.
 
 2. Run `git branch my-animal`. This creates a snapshot (a branch) of your current branch (`master` in this case) named `my-animal`. You could have named this branch whatever you'd like (ex: `git branch covid-sucks`). In this case, you'll be adding our simple script to this branch.
 
@@ -116,7 +121,7 @@ Once you have several commits on a branch, you can choose to do a whole host of 
 ## Step 6: Push your local feature branch to your remote repo (your fork)
 Now that you have your changes committed, you need to _push_ those changes to your remote repository, which is a fork of the original `learn-git` repository. At the end of this step, your remote repository will include your feature branch.
 
-1. Check which branch you're on by running `git status`. If you're not on your feature branch, go ahead and checkout that branch.
+1. Check which branch you're on by running `git status`. If you're not on your feature branch, go ahead and checkout that branch with `git checkout my-animal`.
 2. Run `git push`. Git should automatically display a message similar to:
     ```
     The current branch my-animal has no upstream branch.
