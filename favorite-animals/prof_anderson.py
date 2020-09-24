@@ -1,0 +1,1 @@
+print("My favorite animal is giving everyone A's")
