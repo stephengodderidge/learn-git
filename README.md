@@ -52,44 +52,48 @@ You'll need to clone your fork repository to your local environment. "Clone" mig
 
 And Voila! You've officially cloned the repository onto your local machine. Navigate to your repository by running a quick `cd learn-git`
 
-### Step 2.5: Adding a "Remote" back to the original repository
+<!-- ### Step 2.5: Adding a "Remote" back to the original repository
 One of the trickiest parts of Git is updating your local branch with the changes in the remote repository (`stephengodderidge/learn-git` in our case). In order to do this, we'll need to add a "remote" reference to our local git branch.
 
 1. Run `git remote -v` to see all of your current remotes. You should see one: `origin` and that should reference your forked remote repo. Don't worry about the difference between `(fetch)` and `(push)` for now.
 2. Next, add a remote called `upstream` with the URL of the original repository by running `git remote add upstream https://github.com/stephengodderidge/learn-git.git`.
 3. Run `git remote -v` to see that new remote added
 
-Congrats! You added your new remote! Now, when updates are added to that repository, we'll be able to _pull_ those changes to your local repository. We'll practice this after we open our pull request in the Bonus section of this tutorial.
+Congrats! You added your new remote! Now, when updates are added to that repository, we'll be able to _pull_ those changes to your local repository. We'll practice this after we open our pull request in the Bonus section of this tutorial. -->
 
 
 ## Step 3: Create a feature branch on your local repo
-Now that you're on your local repository, you can focus on making our changes. Your assignment is to add a script to the `favorite-animals/` directory. Yes, very complicated. It's basic, but the goal is to learn git. You'll name your script `your_firstname_and_lastname.py`, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
+Now that you're on your local repository, you can focus on making our changes. Your assignment is to create a folder, all contribute to the same file, and manage any merge conflicts. Yes, very complicated. It's basic, but the goal is to learn git. You'll create a folder with a name of your choice with a `.py` file inside. Feel free to name your script whatever you want, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
 
 1. Make sure you're in the root of your local repo. Use `cd` to get there. To make sure you're on the master branch, run `git status`. The output will show you your current branch. If you're not on your default branch, run the command in step three to switch back. We'll come back to `git status` in a minute.
 
 > (Feature) Branch: A git branch is like an alternate history for your code. In most repositories the branch where your working version lives is called something like `master`, `main`, or `prod`. If you want to try out some changes or build a new feature, you can create a new branch to ensure the other branches of your code won't be affected. When you are ready to add your feature back to the working version you _merge_ the feature branch into `master`.
 
-2. Run `git branch my-animal`. This creates a snapshot (a branch) of your current branch (`master` in this case) named `my-animal`. You could have named this branch whatever you'd like (ex: `git branch covid-sucks`). In this case, you'll be adding our simple script to this branch.
+2. Run `git branch {any-branch-name}`. This creates a snapshot (a branch) of your current branch (`master` in this case) named `{any-branch-name}`. You could have named this branch whatever you'd like (ex: `git branch covid-sucks`). In this case, you'll be adding our simple script to this branch.
 
-3. Now that you have our new branch created, you need to switch our current branch to the new branch. You refer to this process of branch switching as "checking out a branch." Run `git checkout my-animal`. Now, run `git status` to confirm that the current branch as `my-animal`.
+3. Now that you have our new branch created, you need to switch our current branch to the new branch. You refer to this process of branch switching as "checking out a branch." Run `git checkout {any-branch-name}`. Now, run `git status` to confirm that the current branch as `{any-branch-name}`.
 
-4. BONUS - in the future, when you create branches, you can use `git checkout -b <insert-branch-name>` as a shortcut to `git branch` and `git checkout`. This is the same thing as running `git branch my-animal && git checkout my-anmial`. Personally, I _always_ use `git checkout -b`.
+4. BONUS - in the future, when you create branches, you can use `git checkout -b {insert-branch-name}` as a shortcut to `git branch` and `git checkout`. This is the same thing as running `git branch {any-branch-name} && git checkout {any-branch-name}`. Personally, I _always_ use `git checkout -b`.
 
 And voila! You've created your feature branch. You're all set to make these changes.
 
-## Step 4: Add a Python script
+## Step 4: Add a folder structure and upload to your repository
 In this step, you're going to add a script. The important part is that you're going to make changes locally, commit those changes to our feature branch, and ultimately you'll be pushing these changes to our fork.
 
+Before we jump in. Everyone in your group number off from 1-4. We will be splitting up work to make it more collaborative and experience how it feels to contribute to the same repo as your group. 
+
+Person 1: 
 1. Open the `learn-git` folder in your code editor.
-2. Add a new file to the `favorite-animals/` folder.
-3. Name this file `<your-first_name_and_last_name>.py`. Example: stephen_godderidge.py
-4. Add a print statement to the file. This could be anything you want. If you'd like to play along, add a statement that describes your favorite animal. My script does the following:
-```python
-print("My favorite animals are sloths")
-```
-5. Save your new file.
+2. Add a new folder with a name of your choice.
+3. Create a file and name it whatever you may like. Example: i_love_code.py
 
 Now you're ready to move on and actually commit your changes!
+
+<!-- 4. Add a print statement to the file. This could be anything you want. You can share your favorite joke, animal, or anything else you can think of. My script does the following
+```python
+print("My favorite animal is a dolphin")
+```
+5. Save your new file. -->
 
 ## Step 5: Commit your changes
 Committing your changes adds your changes to the current branch. Before you commit your changes, you have to _stage_ your changes. This step may seem trivial when you're working on a few files (especially in our case), but this step becomes more helpful as you work on more files at once.
@@ -98,23 +102,24 @@ Committing your changes adds your changes to the current branch. Before you comm
 
 Think of committing your staged changes as saving your changes to your repository. Follow the steps below, and we'll come back to this question.
 
-1. Make sure you saved your new script.
+Person 1: 
+1. Make sure you saved your new empty file.
 
-2. Run `git status` to see the files that have been changed. You should see a `Changes not staged for commit:` section. Underneath, you should see the file path to your new script (example: `favorite-animals/stephen_godderidge.py`). These are changes that you have saved to your files, but they aren't currently setup to be committed yet. _Your changes aren't staged yet_. In fact, you'll need _add_ them to the staged files before you can commit them.
+2. Run `git status` to see the files that have been changed. You should see a `Changes not staged for commit:` section. Underneath, you should see the file path to your new script. These are changes that you have saved to your files, but they aren't currently setup to be committed yet. _Your changes aren't staged yet_. In fact, you'll need _add_ them to the staged files before you can commit them.
 
-3. Run `git add favorite-animals/<insert_your_script_name>.py`. This step adds the file to the files staged for the commit.
+3. Run `git add {insert_your_folder_name}/{insert_your_script_name}.py`. This step adds the file to the files staged for the commit.
 
     > Note -- if you'd like to stage all of the files you've made changes to locally, you can simply run the shortcut `git add .` instead of adding each file individually.
 
 4. Run `git status` again to confirm the changes have been added to the staged files. You should see a `Changes to be committed:` section. Underneath, you should see the new file path. This means your files are ready to be committed.
 
-5. Run `git commit -m "add my new script"`. This commits the changes, and allows us to add a git commit message at the same time. Now, our branch has been updated to point to this new commit.
+5. Run `git commit -m "add my new folder/file"`. This commits the changes, and allows us to add a git commit message at the same time. Now, our branch has been updated to point to this new commit.
 
 6. Run `git status` to check that the files have been added. You should see a message that says `nothing to commit, working tree clean`
 
 And voila! You've committed your changes.
 
-Now, back to the question – _How is saving your files on your computer different from committing your changes to your repository?_ Committing your changes bundles all of your changes into a single commit and adds that commit to your branch. Once your branch includes this new commit, you are able to push your changes up to your remote repository. From there, someone else could pull your changes, create a branch from your branch, and start adding new commits. By stringing these commits together, the repository has an accurate view of the current state of the branch.
+Now, back to the question – _How is saving your files on your computer different from committing your changes to your repository?_ Committing your changes bundles all of your changes into a single commit and adds that commit to your branch. Once your branch includes this new commit, you are able to push your changes up to your remote repository. From there, someone else could pull your changes, create a branch from your branch, and start adding new commits (not a spoiler alert at all). By stringing these commits together, the repository has an accurate view of the current state of the branch.
 
 Once you have several commits on a branch, you can choose to do a whole host of different actions - undo (wipe away the changes completely), unstage (un-commit the changes, and add them to the unstaged files on your local workspace), and more.
 
