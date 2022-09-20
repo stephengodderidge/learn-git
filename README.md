@@ -54,16 +54,6 @@ You'll need to clone your fork repository to your local environment. "Clone" mig
 
 And Voila! You've officially cloned the repository onto your local machine. Navigate to your repository by running a quick `cd learn-git`
 
-<!-- ### Step 2.5: Adding a "Remote" back to the original repository
-One of the trickiest parts of Git is updating your local branch with the changes in the remote repository (`stephengodderidge/learn-git` in our case). In order to do this, we'll need to add a "remote" reference to our local git branch.
-
-1. Run `git remote -v` to see all of your current remotes. You should see one: `origin` and that should reference your forked remote repo. Don't worry about the difference between `(fetch)` and `(push)` for now.
-2. Next, add a remote called `upstream` with the URL of the original repository by running `git remote add upstream https://github.com/stephengodderidge/learn-git.git`.
-3. Run `git remote -v` to see that new remote added
-
-Congrats! You added your new remote! Now, when updates are added to that repository, we'll be able to _pull_ those changes to your local repository. We'll practice this after we open our pull request in the Bonus section of this tutorial. -->
-
-
 ## Step 4: Create a feature branch on your local repo
 Now that you're on your local repository, you can focus on making our changes. Your assignment is to create a folder, add code to the same file, make pull requests, pull down latest changes, and manage any merge conflicts. Yes, very complicated. It's basic, but the goal is to learn git. You'll create a folder with a name of your choice with a `.py` file inside. Feel free to name your script whatever you want, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
 
@@ -90,12 +80,6 @@ Person 1:
 3. Create a file and name it whatever you may like. Example: i_love_code.py
 
 Now you're ready to move on and actually commit your changes!
-
-<!-- 4. Add a print statement to the file. This could be anything you want. You can share your favorite joke, animal, or anything else you can think of. My script does the following
-```python
-print("My favorite animal is a dolphin")
-```
-5. Save your new file. -->
 
 ## Step 6: Commit your changes
 Committing your changes adds your changes to the current branch. Before you commit your changes, you have to _stage_ your changes. This step may seem trivial when you're working on a few files (especially in our case), but this step becomes more helpful as you work on more files at once.
@@ -172,11 +156,35 @@ Congrats! You've opened your first pull request!! Go ahead and take a look aroun
 
 Now that the pull request has been created, it needs to be reviewed, approved, and merged into our `master` branch. 
 
-Since Person 1 has given edit permissions to the whole group. Let's have the person with the nearest birthday in the remaining group (Person 2, 3, or 4) be the approver.
+Since Person 1 has given edit permissions to the whole group and they cannot approve their own pull request. Let's have the person with the nearest birthday in the remaining group (Person 2, 3, or 4) be the approver.
+
+1. Navigate to the Pull Requests tab on GitHub, the url should look something like `https://github.com/<insert-your-github-username>/learn-git/pulls`
+2. Navigate to Files Changed tab
+3. Click Review Changes, click `Approve` radio button, and add a comment if you would like, and press submit! 
+
+    >Note -- It is not good practice to approve a pull request without thoroughly reading over the code and ensuring that what we are putting into master is good code. However, since this tutorial is focused more on git principles rather than coding principles, don't stress too much about mulling over the one line print statement.
+4. Once the pull request has been approved, Person 1 can go ahead and merge the pull request. 
 
 
+Ta daaaa! You have now reviewed a PR, approved the code, and now the code exists in master! We want the whole team to be able to try this whole process that we walked through. 
 
-# And We've finished the Tutorial! Pat yourself on the back, you're well on your way to mastering git
+## Step 10: Rinse and Repeat
+
+Starting with Person 4 and going backwards, you will now repeat the steps we just walked through. This is your time to collaborate together and try to remember what we have learned so far. 
+1. Pull down the latest code in master
+2. Add a print statement to your `.py` file. This can be anything you want. You can share your favorite joke, animal, etc. An example could be: 
+
+    ```python
+    print("My favorite animal is a dolphin")
+    ```
+3. Save your file and make a commit containing your changes
+4. Create a pull request
+5. Ask a group member to approve your pull request
+6. Merge your request. 
+7. Repeat until all group members have contributed to your repo. 
+
+
+# And We've finished the Tutorial! Pat yourself on the back, you're well on your way to mastering git. If you have spare time, consider trying to manage a merge conflict, rebasing your pull request instead of merging, or reverting a commit. 
 
 ## More Content:
 
