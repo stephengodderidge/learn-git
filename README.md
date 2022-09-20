@@ -24,13 +24,11 @@ The README of this repo is the tutorial, but you'll use the rest of the files to
 
 You are probably familiar with a "version control system," although, you might not call it that. Have you ever edited a Word document and called it something like `My Document_final_FINAL.docx`? Voila! Little did you know, but you were using your very own version control system.
 
-But if you have named your files in this way, you know it is difficult to keep track of all the files and the various changes you made across files.
-
-This is where git shines! When you use git you will only have one file version on your computer at a time and git will track all of the file versions and history for you behind the scenes! Then you can compare versions or switch back to an old version whenever you need.
+But if you have named your files in this way, you know it is difficult to keep track of all the files and the various changes you made across files. This is where Git shines! When you use Git you will only have one file version on your computer at a time and Git will track all of the file versions and history for you behind the scenes! Then you can compare versions or switch back to an old version whenever you need.
 
 ### Distributed Version Control System
 
-Git is a **_Distributed_** version control system because it not only allows you to track versions of files on your computer but across your devices, team members computers, and servers. Git enables easy remote backup and collaboration with your team! No more emailing `.zip` files or passing around [punch cards](https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era). 🚀
+Git is a **_Distributed_** version control system because it not only allows you to track versions of files on your computer but across your devices, team members' computers, and servers. Git enables easy remote backup and collaboration with your team! No more emailing `.zip` files or passing around [punch cards](https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era). 🚀
 
 ### Tutorial Steps
 
