@@ -41,17 +41,16 @@ Here is the tutorial breakdown:
 #### Part 1 (One Team Member)
 
 1. Fork This Repository
-2. Clone Your Newly-Created Fork
-3. Give edit permissions to your team
+2. Give edit permissions to your team
 
 #### Part 2 (All Team Members)
 
-4. Create a feature branch on your local repo
-5. Add a python script to a new folder
-6. Commit your changes
-7. Push your local feature branch to your remote repo (your fork)
-8. Pull down latest changes from master
-9. All team members contribute to newly created repository
+3. Create a feature branch on your local repo
+4. Add a python script to a new folder
+5. Commit your changes
+6. Push your local feature branch to your remote repo (your fork)
+7. Pull down latest changes from master
+8. All team members contribute to newly created repository
 
 ## Part 1 - Setup Team Repository
 
@@ -68,16 +67,19 @@ Conceptually, think about hitting a fork in the road -- the road splits into two
 After you fork your repo, your newly-created repo will be referred to as a "fork." This might sound weird, but just go with it. I promise it will stick eventually.
 
 1. Make sure you're on the base page of the `learn-git` repository: [https://github.com/chingtong/learn-git](https://github.com/chingtong/learn-git).
-2. In the top right-hand corner, you'll see a button that says "Fork". Click it.
-   You'll see a screen that shows "Forking repository". You'll now find yourself on a new repo page. If you look in the top left, you'll see that this repo is based on your `<your-github-username/learn-git>`.
+2. In the top right-hand corner, you'll see a button that says `Fork`. Click it. You'll see a screen that shows "Forking repository". You'll now find yourself on a new repo page. If you look in the top left, you'll see that this repo is based on your `<your-github-username/learn-git>`.
 
 Congrats! You've created a fork! This is simply a copy of the base repository `chingtong/learn-git`. We will use this new repository as a place for your team can share code.
 
+> Now is a good time to copy the url for your new repository (e.g. `https://github.com/<your-github-username/learn-git>`) and share it with your team. They will use it in Step 3
+
 ### Step 2: Give edit permissions to your team
+
+> You will need your team members' github usernames or email addresses for this step.
 
 Your team members need edit permissions to the team repository so they can save their code there without requiring your approval.
 
-Add a new repository collaborators by going to `Settings > Collaborators` then clicking `Add people`. You will need your team members' github usernames or email addresses.
+Add a new repository collaborators by going to `Settings > Collaborators` then clicking `Add people`.
 
 > **Bonus step: Prevent unwanted changes to `master` branch**
 >
@@ -97,26 +99,22 @@ Add a new repository collaborators by going to `Settings > Collaborators` then c
 >
 > This step will protect your `master` branch from unwanted changes. Based on the settings above, changes to `master` will require that another team member review your code before it can be saved via a `pull request`
 
-> Open Source vs Team Repository
-
-#### (Do we want to add branch protection to master?)
-
 ## Part 2 - Team Collaboration (feat. Git)
 
-Okay now that everyone has access to the team repository, it is time for everyone to put their hands to the keyboard. Let's code!
+Okay now that everyone has access to the team repository, it is time for everyone to put their hands to the keyboard so we can practice collaborating with Git. Let's code!
 
-### Step 3: Clone Your Newly-Created Fork
+### Step 3: Clone Your Newly-Created Team Fork
 
-You'll need to clone your fork repository to your local environment. "Clone" might just sound like a fancy way to say "download", but cloning keeps the connection between the remote repository (in GitHub) so you can add our changes (commits) back to the remote. By the end of this step, your will have cloned the repository into a folder on your computer.
+You'll need to clone your team's forked repository to your local environment. "Clone" might just sound like a fancy way to say "download", but cloning keeps the connection between the remote repository (in GitHub) so you can add our changes (commits) back to the remote. By the end of this step, your will have cloned the repository into a folder on your computer.
 
-1. Go to your fork and hit the green "Code" button. Select HTTPS.
+1. Go to your team's fork and hit the green "Code" button. Select HTTPS.
    > There are several ways to clone the repository, including SSH and GitHub's own command-line interface. We're going to keep it simple and go with HTTPS.
 2. Copy the link in the box. This link is the url to the repository. It should look something like https://github.com/your-username-here/learn-git.git
 3. If you're on a Mac, open your terminal. If you're on windows, use Git BASH. I'm not a PC user, but I'm fairly certain you can download Git BASH on [gitforwindows.org](https://gitforwindows.org/)
 4. Navigate to the parent directory you'd like to download it to.
 5. Type the following command: `git clone <insert-the-https-url-here>`
 
-And Voila! You've officially cloned the repository onto your local machine. Navigate to your repository by running a quick `cd learn-git`
+And Ta-da! You've officially cloned the repository onto your local machine. Navigate to your repository by running a quick `cd learn-git`
 
 ### Step 4: Create a feature branch on your local repo
 
