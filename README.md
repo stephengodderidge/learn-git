@@ -17,11 +17,13 @@ The README of this repo is the tutorial, but you'll use the rest of the files to
 In this tutorial, you will be doing the following steps:
 1. Fork This Repository
 2. Clone Your Newly-Created Fork
+3. Give edit permissions to your group
 3. Create a feature branch on your local repo
-4. Add a python script to the `favorite-animals/` folders
+4. Add a python script to a new folder
 5. Commit your changes
 6. Push your local feature branch to your remote repo (your fork)
-7. Open a Pull Request to the Starting Repository (stephengodderidge/learn-git)
+7. Pull down latest changes from master
+8. All team members contribute to newly created repository 
 
 
 ## Step 1: Fork This Repository
@@ -52,18 +54,8 @@ You'll need to clone your fork repository to your local environment. "Clone" mig
 
 And Voila! You've officially cloned the repository onto your local machine. Navigate to your repository by running a quick `cd learn-git`
 
-<!-- ### Step 2.5: Adding a "Remote" back to the original repository
-One of the trickiest parts of Git is updating your local branch with the changes in the remote repository (`stephengodderidge/learn-git` in our case). In order to do this, we'll need to add a "remote" reference to our local git branch.
-
-1. Run `git remote -v` to see all of your current remotes. You should see one: `origin` and that should reference your forked remote repo. Don't worry about the difference between `(fetch)` and `(push)` for now.
-2. Next, add a remote called `upstream` with the URL of the original repository by running `git remote add upstream https://github.com/stephengodderidge/learn-git.git`.
-3. Run `git remote -v` to see that new remote added
-
-Congrats! You added your new remote! Now, when updates are added to that repository, we'll be able to _pull_ those changes to your local repository. We'll practice this after we open our pull request in the Bonus section of this tutorial. -->
-
-
-## Step 3: Create a feature branch on your local repo
-Now that you're on your local repository, you can focus on making our changes. Your assignment is to create a folder, all contribute to the same file, and manage any merge conflicts. Yes, very complicated. It's basic, but the goal is to learn git. You'll create a folder with a name of your choice with a `.py` file inside. Feel free to name your script whatever you want, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
+## Step 4: Create a feature branch on your local repo
+Now that you're on your local repository, you can focus on making our changes. Your assignment is to create a folder, add code to the same file, make pull requests, pull down latest changes, and manage any merge conflicts. Yes, very complicated. It's basic, but the goal is to learn git. You'll create a folder with a name of your choice with a `.py` file inside. Feel free to name your script whatever you want, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
 
 1. Make sure you're in the root of your local repo. Use `cd` to get there. To make sure you're on the master branch, run `git status`. The output will show you your current branch. If you're not on your default branch, run the command in step three to switch back. We'll come back to `git status` in a minute.
 
@@ -77,7 +69,7 @@ Now that you're on your local repository, you can focus on making our changes. Y
 
 And voila! You've created your feature branch. You're all set to make these changes.
 
-## Step 4: Add a folder structure and upload to your repository
+## Step 5: Add a folder structure and upload to your repository
 In this step, you're going to add a script. The important part is that you're going to make changes locally, commit those changes to our feature branch, and ultimately you'll be pushing these changes to our fork.
 
 Before we jump in. Everyone in your group number off from 1-4. We will be splitting up work to make it more collaborative and experience how it feels to contribute to the same repo as your group. 
@@ -89,13 +81,7 @@ Person 1:
 
 Now you're ready to move on and actually commit your changes!
 
-<!-- 4. Add a print statement to the file. This could be anything you want. You can share your favorite joke, animal, or anything else you can think of. My script does the following
-```python
-print("My favorite animal is a dolphin")
-```
-5. Save your new file. -->
-
-## Step 5: Commit your changes
+## Step 6: Commit your changes
 Committing your changes adds your changes to the current branch. Before you commit your changes, you have to _stage_ your changes. This step may seem trivial when you're working on a few files (especially in our case), but this step becomes more helpful as you work on more files at once.
 
 > Think of an assembly line that creates new cars. The cars are assembled, and they go to a separate location for a quality check before shipping out to the customer. This is what your staged changes are. You work on a bunch of changes locally, and then stage the changes (quality check) before they're finally committed (shipped to the customer). Once you've staged your changes, you can review your changes before finally committing them.
@@ -103,7 +89,7 @@ Committing your changes adds your changes to the current branch. Before you comm
 Think of committing your staged changes as saving your changes to your repository. Follow the steps below, and we'll come back to this question.
 
 Person 1: 
-1. Make sure you saved your new empty file.
+1. Make sure you saved your new empty `.py` file.
 
 2. Run `git status` to see the files that have been changed. You should see a `Changes not staged for commit:` section. Underneath, you should see the file path to your new script. These are changes that you have saved to your files, but they aren't currently setup to be committed yet. _Your changes aren't staged yet_. In fact, you'll need _add_ them to the staged files before you can commit them.
 
@@ -123,10 +109,13 @@ Now, back to the question – _How is saving your files on your computer differe
 
 Once you have several commits on a branch, you can choose to do a whole host of different actions - undo (wipe away the changes completely), unstage (un-commit the changes, and add them to the unstaged files on your local workspace), and more.
 
-## Step 6: Push your local feature branch to your remote repo (your fork)
+## Step 7: Push your local feature branch to your remote repo (your fork)
 Now that you have your changes committed, you need to _push_ those changes to your remote repository, which is a fork of the original `learn-git` repository. At the end of this step, your remote repository will include your feature branch.
 
-1. Check which branch you're on by running `git status`. If you're not on your feature branch, go ahead and checkout that branch with `git checkout my-animal`.
+1. Check which branch you're on by running `git status`. If you're not on your feature branch, go ahead and checkout that branch with `git checkout {insert-branch-name}`.
+
+    > Note -- If you don't remember the name of your branch, you can run `git branch` in your terminal and it'll display all the branches you have locally. 
+
 2. Run `git push`. Git should automatically display a message similar to:
     ```
     The current branch my-animal has no upstream branch.
@@ -137,10 +126,10 @@ Now that you have your changes committed, you need to _push_ those changes to yo
     ```
     Don't worry, nothing is wrong. Git is simply helping us with your next step. Git is telling you that you need to set the upstream branch of your local branch to the remote copy (origin). Phew, that was a lot. Let's break it down.
 
-     So, what is `origin`? This is the term that git uses to refer to a remote repo. In our case, origin is our remote repository (our fork). The upstream branch is the branch tracked on the remote repository by your local branch. So, in our case, we're setting up our local `my-animal` branch to track any changes that happen in our origin's (our fork's) `my-animal` branch. When would this be useful? Well, say we have multiple developers making changes to a feature branch. We need a way to pull down the latest commits
+     So, what is `origin`? This is the term that git uses to refer to a remote repo. In our case, origin is our remote repository (our fork). The upstream branch is the branch tracked on the remote repository by your local branch. So, in our case, we're setting up our local branch to track any changes that happen in our origin's (our fork's) branch. When would this be useful? Well, say we have multiple developers making changes to a feature branch. We need a way to pull down the latest commits
 
      [More on that in this helpful article](https://devconnected.com/how-to-set-upstream-branch-on-git/#:~:text=Upstream%20branches%20define%20the%20branch,set%20upstream%20branches%20on%20Git.)
-3. Do as git suggests and run `git push --set-upstream origin my-animal`. You'll see a bunch of update statements like `resolving deltas` and `Writing objects:`. This means git is pushing your local branch to your remote repo. You'll also see a helpful line that should read:
+3. Do as git suggests and run `git push --set-upstream origin {insert-branch-name}`. You'll see a bunch of update statements like `resolving deltas` and `Writing objects:`. This means git is pushing your local branch to your remote repo. You'll also see a helpful line that should read something similar to this:
 
 ```
 remote: Create a pull request for 'my-animal' on GitHub by visiting:
@@ -151,23 +140,51 @@ Copy this URL. You're going to need it in a minute!
 
 4. Bonus -- go to your fork in your browser. In the top left corner, you should see a button that says `Master`. Click it, and see that your branch is there. You can open you branch and navigate to your script. You should be able to see your changes. Pretty cool right?
 
-## Step 7: Open a Pull Request to the Starting Repository (stephengodderidge/learn-git)
-Our next goal is to add our commits to the master branch of the real `learn-git` repo so others can see our script and make changes if they'd like. In order to do this, you need to submit a request to pull those changes into the repo. In other words, you need to open a __pull request__.
+## Step 8: Open a Pull Request
+
+ Our next goal is to add our commits to the master branch of our newly created `learn-git` repo so others can see our script and make changes if they'd like. In order to do this, you need to submit a request to pull those changes into the repo. In other words, you need to open a __pull request__.
 
 This Pull Request needs to be approved by the owners of the repository before it can be _merged_ into master. Different companies have different approval processes (example: multiple reviewers from different teams), but our use case is simple. You're simply focused on opening the pull request.
 
-1. Open a request by going to the link in the last step of Step 6. It should look like `https://github.com/<insert-your-github-username>/learn-git/pull/new/my-animal`. This should take you to a page with the title of __Open a pull request__.
+1. Open a request by going to the link in the last step of Step 6. It should look like `https://github.com/<insert-your-github-username>/learn-git/pull/new/{insert-branch-name}`. This should take you to a page with the title of __Open a pull request__.
 2. Name your Pull Request whatever you want. Add some comments if you'd like.
 3. Once you've added your PR name and comments, go ahead and click the `Create Pull Request`.
 
 Congrats! You've opened your first pull request!! Go ahead and take a look around at the different tabs. See if you can find where you can view your changes (Hint: look for files). You can also view your commit(s).
 
-Because you don't own the upstream repo (`stephengodderidge/learn-git`), you won't be able to approve your own PR. I'll keep an eye on this repo, and once I see your PR, I'll approve it and merge it into master.
+## Step 9: Approve a Pull Request
 
-Note that if I wanted to, I could add collaborators that contribute directly to this repository by going to Settings -> Manage Access -> Invite a Collaborators. This would be particularly useful for group projects.
+Now that the pull request has been created, it needs to be reviewed, approved, and merged into our `master` branch. 
+
+Since Person 1 has given edit permissions to the whole group and they cannot approve their own pull request. Let's have the person with the nearest birthday in the remaining group (Person 2, 3, or 4) be the approver.
+
+1. Navigate to the Pull Requests tab on GitHub, the url should look something like `https://github.com/<insert-your-github-username>/learn-git/pulls`
+2. Navigate to Files Changed tab
+3. Click Review Changes, click `Approve` radio button, and add a comment if you would like, and press submit! 
+
+    >Note -- It is not good practice to approve a pull request without thoroughly reading over the code and ensuring that what we are putting into master is good code. However, since this tutorial is focused more on git principles rather than coding principles, don't stress too much about mulling over the one line print statement.
+4. Once the pull request has been approved, Person 1 can go ahead and merge the pull request. 
 
 
-# And We've finished the Tutorial! Pat yourself on the back, you're well on your way to mastering git
+Ta daaaa! You have now reviewed a PR, approved the code, and now the code exists in master! We want the whole team to be able to try this whole process that we walked through. 
+
+## Step 10: Rinse and Repeat
+
+Starting with Person 4 and going backwards, you will now repeat the steps we just walked through. This is your time to collaborate together and try to remember what we have learned so far. 
+1. Pull down the latest code in master
+2. Add a print statement to your `.py` file. This can be anything you want. You can share your favorite joke, animal, etc. An example could be: 
+
+    ```python
+    print("My favorite animal is a dolphin")
+    ```
+3. Save your file and make a commit containing your changes
+4. Create a pull request
+5. Ask a group member to approve your pull request
+6. Merge your request. 
+7. Repeat until all group members have contributed to your repo. 
+
+
+# And We've finished the Tutorial! Pat yourself on the back, you're well on your way to mastering git. If you have spare time, consider trying to manage a merge conflict, rebasing your pull request instead of merging, or reverting a commit. 
 
 ## More Content:
 
