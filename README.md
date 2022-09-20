@@ -183,6 +183,8 @@ Starting with Person 4 and going backwards, you will now repeat the steps we jus
 6. Merge your request. 
 7. Repeat until all group members have contributed to your repo. 
 
+    >Note: If you want to see an example of what I did, you can look in the `favorite-animals` folder and the `.py` file with my first and last name. 
+
 
 # And We've finished the Tutorial! Pat yourself on the back, you're well on your way to mastering git. If you have spare time, consider trying to manage a merge conflict, rebasing your pull request instead of merging, or reverting a commit. 
 
