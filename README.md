@@ -14,14 +14,38 @@ The README of this repo is the tutorial, but you'll use the rest of the files to
 
 1. You have git installed on your machine
 2. You have setup your git config with your email and git username. See the section `Your Identity` in [the First Time Git Setup documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) if you haven't done this step. You can make sure that you've done this step by running `git config user.name` and `git config user.email`.
+3. You have [created an account on Github](https://github.com/signup).
 
-## Step 0: Tutorial Overview
+## Tutorial Overview
 
-In this tutorial, you will be doing the following steps:
+> Git is a [distributed version control system](https://en.wikipedia.org/wiki/Distributed_version_control). Let's break down what that means...
+
+### Version Control System
+
+You are probably familiar with a "version control system," although, you might not call it that. Have you ever edited a Word document can called it something like `My Document_final_FINAL.docx`? Voila! Little did you know, but you were using your very own version control system.
+
+But if you have named your files in this way, you know it is difficult to keep track of all the files and the various changes you made across files.
+
+This is where git shines! When you use git you will only have one file version on your computer at a time and git will track all of the file versions and history for you behind the scenes! Then you can compare versions or switch back to an old version whenever you need.
+
+### Distributed Version Control System
+
+Git is a **_Distributed_** version control system because it not only allows you to track versions of files on your computer but across your devices, team members computers, and servers. Git enables easy remote backup and collaboration with your team! No more emailing `.zip` files or passing around [punch cards](https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era). 🚀
+
+### Tutorial Steps
+
+This tutorial is designed as a team assignment where you can learn to use Git as a powerful collaboration tool. The tutorial will be divided into two parts. In the first part, one team member will do the initial setup of a shared project where all the team members can contribute. The second part will consist of every team member making code changes on their machine and then combining the code into the shared project.
+
+Here is the tutorial breakdown:
+
+#### Part 1 (One Team Member)
 
 1. Fork This Repository
 2. Clone Your Newly-Created Fork
-3. Give edit permissions to your group
+3. Give edit permissions to your team
+
+#### Part 2 (All Team Members)
+
 4. Create a feature branch on your local repo
 5. Add a python script to a new folder
 6. Commit your changes
@@ -29,23 +53,59 @@ In this tutorial, you will be doing the following steps:
 8. Pull down latest changes from master
 9. All team members contribute to newly created repository
 
-## Step 1: Fork This Repository
+## Part 1 - Setup Team Repository
+
+Alright! Pick one team member that will do the initial project setup and then let's git to it! 😉
+
+### Step 1: Fork This Repository
 
 > Repository (Repo): A folder that holds your code. This folder is special because it has a hidden `.git` folder that holds information about how your repository has changed over time.
 
 Instead of adding your changes directly to someone else's repo, you can create a copy of their repository to work with. When you create this copy, we call it "forking the repository."
 
-Conceptually, think about hitting a fork in the road -- the road splits into two. This is the same with forking in git. Forking simply creates a snapshot of the base repository (`stephengodderidge/learn-git`) that you have permission to make changes to.
+Conceptually, think about hitting a fork in the road -- the road splits into two. This is the same with forking in git. Forking simply creates a snapshot of the base repository (`chingtong/learn-git`) that you have permission to make changes to.
 
 After you fork your repo, your newly-created repo will be referred to as a "fork." This might sound weird, but just go with it. I promise it will stick eventually.
 
-1. Make sure you're on the base page of the `learn-git` repository: [https://github.comstephengodderidge/learn-git](https://github.com/stephengodderidge/learn-git).
+1. Make sure you're on the base page of the `learn-git` repository: [https://github.com/chingtong/learn-git](https://github.com/chingtong/learn-git).
 2. In the top right-hand corner, you'll see a button that says "Fork". Click it.
    You'll see a screen that shows "Forking repository". You'll now find yourself on a new repo page. If you look in the top left, you'll see that this repo is based on your `<your-github-username/learn-git>`.
 
-Congrats! You've created a fork! This is simply a copy of the base repository `stephengodderidge/learn-git`
+Congrats! You've created a fork! This is simply a copy of the base repository `chingtong/learn-git`. We will use this new repository as a place for your team can share code.
 
-## Step 2: Clone Your Newly-Created Fork
+### Step 2: Give edit permissions to your team
+
+Your team members need edit permissions to the team repository so they can save their code there without requiring your approval.
+
+Add a new repository collaborators by going to `Settings > Collaborators` then clicking `Add people`. You will need your team members' github usernames or email addresses.
+
+> **Bonus step: Prevent unwanted changes to `master` branch**
+>
+> > _If any of the terms here are confusing, don't worry! You can skip this step and come back to enable branch protection at any time_
+>
+> We want to protect our code against unwanted or accidental changes. For example, it is possbile to accidently delete the version history of our repository. Yikes!
+>
+> Navigate to `Settings > Branches`, then in the `Branch protection rule` section click `add rule`. In the "Branch name pattern" box type `master`.
+> Then enable the following settings:
+>
+> 1. Require a pull request before merging
+> 2. Require approvals
+> 3. Dismiss stale pull request approvals when new commits are pushed
+> 4. Do not allow bypassing the above settings
+>
+> Then click `Create`
+>
+> This step will protect your `master` branch from unwanted changes. Based on the settings above, changes to `master` will require that another team member review your code before it can be saved via a `pull request`
+
+> Open Source vs Team Repository
+
+#### (Do we want to add branch protection to master?)
+
+## Part 2 - Team Collaboration (feat. Git)
+
+Okay now that everyone has access to the team repository, it is time for everyone to put their hands to the keyboard. Let's code!
+
+### Step 3: Clone Your Newly-Created Fork
 
 You'll need to clone your fork repository to your local environment. "Clone" might just sound like a fancy way to say "download", but cloning keeps the connection between the remote repository (in GitHub) so you can add our changes (commits) back to the remote. By the end of this step, your will have cloned the repository into a folder on your computer.
 
@@ -58,7 +118,7 @@ You'll need to clone your fork repository to your local environment. "Clone" mig
 
 And Voila! You've officially cloned the repository onto your local machine. Navigate to your repository by running a quick `cd learn-git`
 
-## Step 4: Create a feature branch on your local repo
+### Step 4: Create a feature branch on your local repo
 
 Now that you're on your local repository, you can focus on making our changes. Your assignment is to create a folder, add code to the same file, make pull requests, pull down latest changes, and manage any merge conflicts. Yes, very complicated. It's basic, but the goal is to learn git. You'll create a folder with a name of your choice with a `.py` file inside. Feel free to name your script whatever you want, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
 
@@ -74,7 +134,7 @@ Now that you're on your local repository, you can focus on making our changes. Y
 
 And voila! You've created your feature branch. You're all set to make these changes.
 
-## Step 5: Add a folder structure and upload to your repository
+### Step 5: Add a folder structure and upload to your repository
 
 In this step, you're going to add a script. The important part is that you're going to make changes locally, commit those changes to our feature branch, and ultimately you'll be pushing these changes to our fork.
 
@@ -88,7 +148,7 @@ Person 1:
 
 Now you're ready to move on and actually commit your changes!
 
-## Step 6: Commit your changes
+### Step 6: Commit your changes
 
 Committing your changes adds your changes to the current branch. Before you commit your changes, you have to _stage_ your changes. This step may seem trivial when you're working on a few files (especially in our case), but this step becomes more helpful as you work on more files at once.
 
@@ -118,7 +178,7 @@ Now, back to the question – _How is saving your files on your computer differe
 
 Once you have several commits on a branch, you can choose to do a whole host of different actions - undo (wipe away the changes completely), unstage (un-commit the changes, and add them to the unstaged files on your local workspace), and more.
 
-## Step 7: Push your local feature branch to your remote repo (your fork)
+### Step 7: Push your local feature branch to your remote repo (your fork)
 
 Now that you have your changes committed, you need to _push_ those changes to your remote repository, which is a fork of the original `learn-git` repository. At the end of this step, your remote repository will include your feature branch.
 
@@ -153,7 +213,7 @@ Copy this URL. You're going to need it in a minute!
 
 4. Bonus -- go to your fork in your browser. In the top left corner, you should see a button that says `Master`. Click it, and see that your branch is there. You can open you branch and navigate to your script. You should be able to see your changes. Pretty cool right?
 
-## Step 8: Open a Pull Request
+### Step 8: Open a Pull Request
 
 Our next goal is to add our commits to the master branch of our newly created `learn-git` repo so others can see our script and make changes if they'd like. In order to do this, you need to submit a request to pull those changes into the repo. In other words, you need to open a **pull request**.
 
@@ -165,7 +225,7 @@ This Pull Request needs to be approved by the owners of the repository before it
 
 Congrats! You've opened your first pull request!! Go ahead and take a look around at the different tabs. See if you can find where you can view your changes (Hint: look for files). You can also view your commit(s).
 
-## Step 9: Approve a Pull Request
+### Step 9: Approve a Pull Request
 
 Now that the pull request has been created, it needs to be reviewed, approved, and merged into our `master` branch.
 
@@ -181,7 +241,7 @@ Since Person 1 has given edit permissions to the whole group and they cannot app
 
 Ta daaaa! You have now reviewed a PR, approved the code, and now the code exists in master! We want the whole team to be able to try this whole process that we walked through.
 
-## Step 10: Rinse and Repeat
+### Step 10: Rinse and Repeat
 
 Starting with Person 4 and going backwards, you will now repeat the steps we just walked through. This is your time to collaborate together and try to remember what we have learned so far.
 
