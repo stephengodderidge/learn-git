@@ -77,7 +77,7 @@ Congrats! You've created a fork! This is simply a copy of the base repository `c
 
 Your team members need edit permissions to the team repository so they can save their code there without requiring your approval.
 
-Add a new repository collaborators by going to `Settings > Collaborators` then clicking `Add people`.
+Add new repository collaborators by going to `Settings > Collaborators` then clicking `Add people`. Add all of the members of your team. They should all receive a github notification where they can accept your invitation to collaborate on the repo.
 
 > **Bonus step: Prevent unwanted changes to `master` branch**
 >
