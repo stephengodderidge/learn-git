@@ -22,7 +22,7 @@ The README of this repo is the tutorial, but you'll use the rest of the files to
 
 ### Version Control System
 
-You are probably familiar with a "version control system," although, you might not call it that. Have you ever edited a Word document can called it something like `My Document_final_FINAL.docx`? Voila! Little did you know, but you were using your very own version control system.
+You are probably familiar with a "version control system," although, you might not call it that. Have you ever edited a Word document and called it something like `My Document_final_FINAL.docx`? Voila! Little did you know, but you were using your very own version control system.
 
 But if you have named your files in this way, you know it is difficult to keep track of all the files and the various changes you made across files.
 
