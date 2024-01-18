@@ -1,0 +1,1 @@
+print("Flamingos are Wild :)")
