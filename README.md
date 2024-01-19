@@ -7,13 +7,29 @@ Git might not get you a job, but it will certainly be an every day tool. It's ho
 
 > PPS - Don't worry, I won't let the git puns git in our way.
 
+# Table of Contents <a name="table-of-content"></a>
+* [Pre-requisites](#pre-requisites)
+    1. [Install Git](#pre-requisites)
+    2. [Configure Git](#pre-requisites)
+0. [Step 0 - Tutorial Overview](#step0)
+1. [Step 1 - Fork This Repository](#step1)
+2. [Step 2 - Clone Your Newly-Created Fork](#step2)
+    1. [Step 2.5 - Adding a "Remote" back to the original repository](#step2.5)
+3. [Step 3 - Create a feature branch on your local repo](#step3)
+4. [Step 4 - Add a Python script](#step4)
+5. [Step 5 - Commit your changes](#step5)
+6. [Step 6 - Push your local feature branch to your remote repo (your fork)](#step6)
+7. [Step 7 - Open a Pull Request to the Starting Repository (stephengodderidge/learn-git)](#step7)
+
 The README of this repo is the tutorial, but you'll use the rest of the files to practice forking, committing, open a PR, etc. This won't teach you everything, but I hope it gives you enough of a base if you get stuck in any sticky situations.
 
-## Pre-requisites:
+## Pre-requisites: <a name="pre-requisites"></a>
 1. You have git installed on your machine
 2. You have setup your git config with your email and git username. See the section `Your Identity` in [the First Time Git Setup documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) if you haven't done this step. You can make sure that you've done this step by running `git config user.name` and `git config user.email`.
 
-## Step 0: Tutorial Overview
+[Back To Content Table](#table-of-content)
+
+## Step 0: Tutorial Overview <a name="step0"></a>
 In this tutorial, you will be doing the following steps:
 1. Fork This Repository
 2. Clone Your Newly-Created Fork
@@ -23,8 +39,9 @@ In this tutorial, you will be doing the following steps:
 6. Push your local feature branch to your remote repo (your fork)
 7. Open a Pull Request to the Starting Repository (stephengodderidge/learn-git)
 
+[Back To Content Table](#table-of-content)
 
-## Step 1: Fork This Repository
+## Step 1: Fork This Repository <a name="step1"></a>
 
 > Repository (Repo): A folder that holds your code. This folder is special because it has a hidden `.git` folder that holds information about how your repository has changed over time.
 
@@ -40,7 +57,9 @@ After you fork your repo, your newly-created repo will be referred to as a "fork
 
 Congrats! You've created a fork! This is simply a copy of the base repository `stephengodderidge/learn-git`
 
-## Step 2: Clone Your Newly-Created Fork
+[Back To Content Table](#table-of-content)
+
+## Step 2: Clone Your Newly-Created Fork <a name="step2"></a>
 You'll need to clone your fork repository to your local environment. "Clone" might just sound like a fancy way to say "download", but cloning keeps the connection between the remote repository (in GitHub) so you can add our changes (commits) back to the remote. By the end of this step, your will have cloned the repository into a folder on your computer.
 
 1. Go to your fork and hit the green "Code" button. Select HTTPS.
@@ -52,7 +71,10 @@ You'll need to clone your fork repository to your local environment. "Clone" mig
 
 And Voila! You've officially cloned the repository onto your local machine. Navigate to your repository by running a quick `cd learn-git`
 
-### Step 2.5: Adding a "Remote" back to the original repository
+[Back To Content Table](#table-of-content)
+
+
+### Step 2.5: Adding a "Remote" back to the original repository <a name="step2.5"></a>
 One of the trickiest parts of Git is updating your local branch with the changes in the remote repository (`stephengodderidge/learn-git` in our case). In order to do this, we'll need to add a "remote" reference to our local git branch.
 
 1. Run `git remote -v` to see all of your current remotes. You should see one: `origin` and that should reference your forked remote repo. Don't worry about the difference between `(fetch)` and `(push)` for now.
@@ -61,8 +83,9 @@ One of the trickiest parts of Git is updating your local branch with the changes
 
 Congrats! You added your new remote! Now, when updates are added to that repository, we'll be able to _pull_ those changes to your local repository. We'll practice this after we open our pull request in the Bonus section of this tutorial.
 
+[Back To Content Table](#table-of-content)
 
-## Step 3: Create a feature branch on your local repo
+## Step 3: Create a feature branch on your local repo <a name="step3"></a>
 Now that you're on your local repository, you can focus on making our changes. Your assignment is to add a script to the `favorite-animals/` directory. Yes, very complicated. It's basic, but the goal is to learn git. You'll name your script `your_firstname_and_lastname.py`, commit it to your local repo, push your changes to your fork, and open a repo. Phew, that's a lot! Don't worry, you'll focus on creating the feature branch in this step.
 
 1. Make sure you're in the root of your local repo. Use `cd` to get there. To make sure you're on the master branch, run `git status`. The output will show you your current branch. If you're not on your default branch, run the command in step three to switch back. We'll come back to `git status` in a minute.
@@ -77,7 +100,9 @@ Now that you're on your local repository, you can focus on making our changes. Y
 
 And voila! You've created your feature branch. You're all set to make these changes.
 
-## Step 4: Add a Python script
+[Back To Content Table](#table-of-content)
+
+## Step 4: Add a Python script <a name="step4"></a>
 In this step, you're going to add a script. The important part is that you're going to make changes locally, commit those changes to our feature branch, and ultimately you'll be pushing these changes to our fork.
 
 1. Open the `learn-git` folder in your code editor.
@@ -91,7 +116,9 @@ print("My favorite animals are sloths")
 
 Now you're ready to move on and actually commit your changes!
 
-## Step 5: Commit your changes
+[Back To Content Table](#table-of-content)
+
+## Step 5: Commit your changes <a name="step5"></a>
 Committing your changes adds your changes to the current branch. Before you commit your changes, you have to _stage_ your changes. This step may seem trivial when you're working on a few files (especially in our case), but this step becomes more helpful as you work on more files at once.
 
 > Think of an assembly line that creates new cars. The cars are assembled, and they go to a separate location for a quality check before shipping out to the customer. This is what your staged changes are. You work on a bunch of changes locally, and then stage the changes (quality check) before they're finally committed (shipped to the customer). Once you've staged your changes, you can review your changes before finally committing them.
@@ -118,7 +145,10 @@ Now, back to the question – _How is saving your files on your computer differe
 
 Once you have several commits on a branch, you can choose to do a whole host of different actions - undo (wipe away the changes completely), unstage (un-commit the changes, and add them to the unstaged files on your local workspace), and more.
 
-## Step 6: Push your local feature branch to your remote repo (your fork)
+[Back To Content Table](#table-of-content)
+
+
+## Step 6: Push your local feature branch to your remote repo (your fork) <a name="step6"></a>
 Now that you have your changes committed, you need to _push_ those changes to your remote repository, which is a fork of the original `learn-git` repository. At the end of this step, your remote repository will include your feature branch.
 
 1. Check which branch you're on by running `git status`. If you're not on your feature branch, go ahead and checkout that branch with `git checkout my-animal`.
@@ -146,7 +176,9 @@ Copy this URL. You're going to need it in a minute!
 
 4. Bonus -- go to your fork in your browser. In the top left corner, you should see a button that says `Master`. Click it, and see that your branch is there. You can open you branch and navigate to your script. You should be able to see your changes. Pretty cool right?
 
-## Step 7: Open a Pull Request to the Starting Repository (stephengodderidge/learn-git)
+[Back To Content Table](#table-of-content)
+
+## Step 7: Open a Pull Request to the Starting Repository <a name="step7"></a> (stephengodderidge/learn-git)
 Our next goal is to add our commits to the master branch of the real `learn-git` repo so others can see our script and make changes if they'd like. In order to do this, you need to submit a request to pull those changes into the repo. In other words, you need to open a __pull request__.
 
 This Pull Request needs to be approved by the owners of the repository before it can be _merged_ into master. Different companies have different approval processes (example: multiple reviewers from different teams), but our use case is simple. You're simply focused on opening the pull request.
@@ -161,6 +193,7 @@ Because you don't own the upstream repo (`stephengodderidge/learn-git`), you won
 
 Note that if I wanted to, I could add collaborators that contribute directly to this repository by going to Settings -> Manage Access -> Invite a Collaborators. This would be particularly useful for group projects.
 
+[Back To Content Table](#table-of-content)
 
 # And We've finished the Tutorial! Pat yourself on the back, you're well on your way to mastering git
 
