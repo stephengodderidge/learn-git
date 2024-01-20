@@ -1,1 +1,0 @@
-print("My favorite animals are bears")
